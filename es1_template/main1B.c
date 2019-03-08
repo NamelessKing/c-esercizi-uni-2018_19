@@ -5,7 +5,7 @@
 /*
 
 Compilare con:
-gcc -g3 -Og -ansi -pedantic -Wall -Wextra -o es1A es1B.c main1B.c -lm
+gcc -g3 -Og -ansi -pedantic -Wall -Wextra -o es1B es1B.c main1B.c -lm
 
 Eseguire con:
 ./es1B
@@ -32,7 +32,7 @@ int errori(double x, double epsilon) {
 int main() {
   const int n = 900;
   int i,num_errori=0;
-  
+
   for (i=1; i<=n; i++) {
     num_errori += errori(1.0 + i / 100.0, 1E-1);
     num_errori += errori(1.0 + i / 100.0, 1E-3);
