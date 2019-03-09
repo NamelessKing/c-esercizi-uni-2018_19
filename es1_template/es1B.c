@@ -2,16 +2,17 @@
 
 double radice_quadrata(double x, double epsilon) {
 
-    double a=1, b=x;
+    double a=1, b=x,rad_appro=((a+b)/2.0);
 
     while(b-a>=epsilon){
-        if(((b+a)/2.0)*((b+a)/2.0)>=x){
-            b=(b+a)/2.0;
+        if(rad_appro*rad_appro>=x){
+            b=rad_appro;
         }
         else{
-            a=(b+a)/2.0;
+            a=rad_appro;
         }
+        rad_appro = ((a+b)/2.0);
     }
 
-  return ((b+a)/2.0);
+  return rad_appro;
 }
