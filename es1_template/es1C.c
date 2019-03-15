@@ -14,7 +14,8 @@ int isPrime(int n){
 int goldbach(int n) {
   int i;
   int p1 = 0;
-  for ( i = 2; i < n && !p1; i++) {
+
+  for ( i = 2; i < n && !p1 && n>2 && n%2 == 0; i++) {
     if(isPrime(i) && isPrime(n - i)){
       p1 = i;
     }
