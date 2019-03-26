@@ -1,0 +1,1 @@
+void riduciSpazi(char str[]);
