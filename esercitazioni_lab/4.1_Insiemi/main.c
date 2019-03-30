@@ -42,6 +42,9 @@ int main() {
     }
     printf("\n\n");
 
+
+    ordina_insieme(B);
+
     for(i = 0;i<=B[0];i++){
         printf("%d   %d\n",B[i],i);
     }

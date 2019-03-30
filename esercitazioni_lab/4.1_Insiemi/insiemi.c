@@ -19,9 +19,9 @@ int inserisci_elemento_insieme(insieme A,int x){
 
 
 int elimina_elemento_insieme(insieme A,int x){
-    int i;
+    int i,risp = 0;
     if(!insieme_contiene(A,x)){
-        return 0;
+        return risp;
     }
 
     for(i = 1; A[i] != x; i++);
@@ -33,7 +33,7 @@ int elimina_elemento_insieme(insieme A,int x){
     }
 
     A[0]--;
-    return 1;
+    return !risp;
 }
 
 
@@ -49,18 +49,17 @@ int insieme_contiene(insieme A,int x){
 }
 
 
-int intersezione_insiemi(insieme A,insieme B,insieme risultato){
+void intersezione_insiemi(insieme A,insieme B,insieme risultato){
     int i,j;
     for(i = 1; i<=A[0]; i++){
         if(insieme_contiene(B,A[i])){
             inserisci_elemento_insieme(risultato,A[i]);
         }
     }
-    return 0;
 }
 
 
-int unione(insieme A,insieme B,insieme risultato){
+void unione_insiemi(insieme A,insieme B,insieme risultato){
     int i;
     for(i = 1; i<=A[0] || i<=B[0]; i++){
         if(i<=A[0]){
@@ -71,17 +70,29 @@ int unione(insieme A,insieme B,insieme risultato){
             inserisci_elemento_insieme(risultato,B[i]);
         }
     }
-    return 0;
 }
 
 
-int differenza_insiemi(insieme A,insieme B,insieme risultato){
-    int i,j;
+void differenza_insiemi(insieme A,insieme B,insieme risultato){
+    int i;
     for(i = 1; i<=A[0]; i++){
         if(!insieme_contiene(B,A[i])){
             inserisci_elemento_insieme(risultato,A[i]);
         }
     }
-    return 0;
 }
 
+
+void ordina_insieme(insieme A){
+    int i,j,temp;
+
+    for(i = 1; i<=A[0]; i++){
+        for(j = i + 1; j<=A[0]; j++){
+            if(A[j] < A[i]){
+                temp = A[i];
+                A[i] = A[j];
+                A[j] = temp;
+            }
+        }
+    }
+}

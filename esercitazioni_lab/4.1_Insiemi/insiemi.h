@@ -14,14 +14,13 @@ int elimina_elemento_insieme(insieme A,int x);
 int insieme_contiene(insieme A,int x);
 
 
-int intersezione_insiemi(insieme A,insieme B,insieme risultato);
+void intersezione_insiemi(insieme A,insieme B,insieme risultato);
 
 
-int unione(insieme A,insieme B,insieme risultato);
+void unione_insiemi(insieme A,insieme B,insieme risultato);
 
 
-int differenza_insiemi(insieme A,insieme B,insieme risultato);
+void differenza_insiemi(insieme A,insieme B,insieme risultato);
 
 
-
-
+void ordina_insieme(insieme A);
