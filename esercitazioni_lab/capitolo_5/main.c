@@ -24,7 +24,7 @@ void insertion(inta[],int dim){
             if(a[j] < a[j - 1]){
                 temp = a[j];
                 a[j - 1] = a[j];
-                a[j - 1] = temp;
+                a[j] = temp;
             }
         }
     }

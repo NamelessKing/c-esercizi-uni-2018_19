@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include "es3D.h"
 
-int main(int argc, char const *argv[]) {
-  int i;
-  /* esempio utilizzo parametri da linea di comando */
-  for (i=0; i<argc; i++) {
-    printf("%d: \"%s\"\n", i, argv[i]);
-  }
+int main(){
+
+  int a[] = {1,2,3,4} ;
+  int lung = sizeof(a) / sizeof(a[0]);
+  printf("%d\n",sequenza_decrescente_massima(a,&lung));
+  printf("%d\n",lung);
   return 0;
 }
