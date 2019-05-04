@@ -18,7 +18,6 @@ int aux_sequenza_dec(int A[], int *lung,int i,int count,int max,int index){
             max = count;
             index =  i - count + 1;
         }
-        /*printf("%d\n",index);*/
         return aux_sequenza_dec(A,lung,i + 1, 1,max,index);
     }
 

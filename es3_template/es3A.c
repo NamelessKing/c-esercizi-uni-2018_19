@@ -28,7 +28,6 @@ int aux_pal(char *s,int i,int j,int inizio_i,int fine_j){
     }
 
     if(s[inizio_i] == s[fine_j]){
-        /*printf("%c%c[%d][%d] ",s[inizio_i],s[fine_j],i,j);*/
         return aux_pal(s,i + 1,j - 1,inizio_i + 1,fine_j - 1);
     }else{
         return 0;
