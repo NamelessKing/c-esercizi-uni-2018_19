@@ -1,4 +1,4 @@
-#define VALORI_PER_CELLA 10
+#define VALORI_PER_CELLA 3
 
 struct cella {
    int valori[VALORI_PER_CELLA];

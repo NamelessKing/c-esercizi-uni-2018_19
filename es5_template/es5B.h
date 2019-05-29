@@ -5,3 +5,4 @@ struct cella {
 typedef struct cella *tlista;
 
 tlista intersezione(tlista lista1, tlista lista2);
+void inserisci(tlista *lista, int valore);
